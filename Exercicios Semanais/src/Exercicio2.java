@@ -6,7 +6,6 @@ public class Exercicio2 {
         }
         IO.println();
     }
-
     public static void LateraisRetangulo(int largura, int altura){
         for(int i = 0; i < (altura - 2); i++){
             IO.print("X");
@@ -14,11 +13,9 @@ public class Exercicio2 {
             for(int j = 0; j < (largura-2); j++){
                 IO.print(" ");
             }
-
             IO.println("X");    
         }
-    }
-    
+    }    
     public static void main(String[] args){
         int largura, altura;
         IO.println("=====Escreva as dimensoes do seu retangulo=====");
