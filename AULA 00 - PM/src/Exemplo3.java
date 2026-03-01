@@ -16,7 +16,7 @@ especificado no segundo parâmetro. */
                 contador++;
             }
         }
-        return 0;
+        return res;
     }
     
     public static void main(String[] args){
