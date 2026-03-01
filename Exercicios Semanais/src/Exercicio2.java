@@ -1,12 +1,11 @@
 public class Exercicio2 {
-
-    public static void BasesRetangulo(int largura){
+    static void BasesRetangulo(int largura){
         for(int i = 0; i < largura; i++){
             IO.print("X");
         }
         IO.println();
     }
-    public static void LateraisRetangulo(int largura, int altura){
+    static void LateraisRetangulo(int largura, int altura){
         for(int i = 0; i < (altura - 2); i++){
             IO.print("X");
 
@@ -27,8 +26,7 @@ public class Exercicio2 {
             if(largura < 2 && altura < 2){
                 IO.println("Escreva valores maiores ou iguais a 2.\n");
             }
-        }while(largura < 2 && altura < 2);
-        
+        }while(largura < 2 && altura < 2);    
         BasesRetangulo(largura);  
         LateraisRetangulo(largura, altura);
         BasesRetangulo(largura);  

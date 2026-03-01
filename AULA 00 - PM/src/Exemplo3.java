@@ -16,17 +16,14 @@ especificado no segundo parâmetro. */
                 contador++;
             }
         }
-        
+        return 0;
     }
     
     public static void main(String[] args){
         String[] emails = { "caram@pucminas.br", "caram@gmail.com", "engsoftware.lourdes@pucminas.br", "provas.lourdes@pucminas.br", "contact@microsoft.com","education@githubcom", "costumerservice@redhat.com"};
         String dominio = "pucminas.br";
 
-        String[] resultado = filtroEmails(emails, dominio);
-
-        
-        
+        String[] resultado = filtroEmails(emails, dominio);     
     }
 }
 
