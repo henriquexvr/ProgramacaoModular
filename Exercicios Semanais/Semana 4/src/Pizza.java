@@ -19,7 +19,7 @@ public class Pizza {
         if(quantos > 8){
             IO.println("Maximo de 8 ingredientes podem ser adicionados");
         }
-        return quantidadeDeIngredientes = quantos;
+        return quantidadeDeIngredientes += quantos;
     }
     public String cumpomDeVenda(){
         descricao = String.format("====Cumpom de Venda====\nQuantidade de acrescimos: %d \nPreço Total dos acrescimos: R$%.2f x %d = R$%.2f \nPreço minimo: R$%.2f\nPreço total: R$%.2f\n", quantidadeDeIngredientes, valorPorAdicional, quantidadeDeIngredientes, (quantidadeDeIngredientes * valorPorAdicional),precoBase, valorAPagar());
