@@ -1,5 +1,5 @@
 public class AppPizza {
-    public static void main(String[] args) throws Exception {
+    void main(){
         int qntdAdicionais;
         Pizza pizza1 = new Pizza();
         do{
