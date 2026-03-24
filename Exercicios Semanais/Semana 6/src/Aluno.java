@@ -3,16 +3,19 @@ public class Aluno {
 	private String nome;
 	private int numero;
 	private double notaTotal;
-	private double porcentFalta;
+	//private double porcentFalta;
 	private int qntdAvaliacoes;
 
 	public Aluno(String nome, int numero) {
-		
+		this.nome = nome;
+    	this.numero = numero;
+    	this.notaTotal = 0;
+    	this.qntdAvaliacoes = 0;
 	}
 
-	public double frequenciaAluno(int qntdFaltas) {
+	//public double frequenciaAluno(int qntdFaltas) {
 		
-	}
+	//}
 
 	public double calculaNota(double nota) {
 		if(nota > 25d){	
@@ -25,8 +28,8 @@ public class Aluno {
 		return notaTotal;
 	}
 
-	public String toString() {
+	//public String toString() {
 		
-	}
+	//}
 
 }
