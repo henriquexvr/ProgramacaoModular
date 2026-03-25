@@ -3,8 +3,10 @@ public class Aluno {
 	private String nome;
 	private int numero;
 	private double notaTotal;
-	//private double porcentFalta;
+	private double porcentFalta;
 	private int qntdAvaliacoes;
+	private static final double NOTA_MAX = 25d;
+	private static final double MAX_PROVAS = 4d;
 
 	public Aluno(String nome, int numero) {
 		this.nome = nome;
@@ -13,23 +15,23 @@ public class Aluno {
     	this.qntdAvaliacoes = 0;
 	}
 
-	//public double frequenciaAluno(int qntdFaltas) {
+	public double frequenciaAluno(int qntdFaltas) {
 		
-	//}
+	}
 
 	public double calculaNota(double nota) {
-		if(nota > 25d){	
-			nota = 25d;
+		if(nota > NOTA_MAX){	
+			nota = NOTA_MAX;
 		}
 		qntdAvaliacoes++;
-		if(qntdAvaliacoes <= 4){
+		if(qntdAvaliacoes <= MAX_PROVAS){
 			notaTotal += nota;
 		}
 		return notaTotal;
 	}
 
-	//public String toString() {
+	public String toString() {
 		
-	//}
+	}
 
 }
