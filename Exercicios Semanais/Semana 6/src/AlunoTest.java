@@ -15,9 +15,10 @@ public class AlunoTest {
         aluno1.calculaNota(10d);
         aluno1.calculaNota(17d);
         aluno1.calculaNota(22d);
-       double resultado = aluno1.calculaNota(12d);
+        aluno1.calculaNota(12d);
+        boolean resultado = aluno1.estaAprovado();
         //Assert
-        assertEquals(61d, resultado);
+        assertEquals(true, resultado);
     }
 
     @Test
@@ -26,8 +27,9 @@ public class AlunoTest {
         aluno1.calculaNota(10d);
         aluno1.calculaNota(12d);
         aluno1.calculaNota(6d);
-       double resultado = aluno1.calculaNota(13d);
+        aluno1.calculaNota(13d);
+        boolean resultado = aluno1.estaAprovado();
         //Assert
-        assertEquals(41d, resultado);
+        assertEquals(false, resultado);
     }
 }
