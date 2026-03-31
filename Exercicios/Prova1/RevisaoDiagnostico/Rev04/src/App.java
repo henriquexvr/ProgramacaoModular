@@ -28,11 +28,9 @@ private int tamanhoDoVetor(int[] vetorOriginal){
         int tamanhoNovoVetor = vetorOriginal.length/2;
         if(vetorOriginal.length % 2 != 0){
             tamanhoNovoVetor++;
-        }
-        
+        }      
     return tamanhoNovoVetor;
 }
-
 
 void main(){
     String tamanhoVetorStr = IO.readln("Escreva o tamanho do vetor: ");
