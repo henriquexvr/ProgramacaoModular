@@ -17,6 +17,7 @@ public class Livro {
 		if(numeroPags <= 0){
 			numeroPags = MIN_PAGS;
 		}
+		tempoEstimado = "Ainda nao calculado";
 	}
 
 	public double avaliar(int numEstrelas) {
@@ -29,6 +30,9 @@ public class Livro {
 
 	public double mediaAvaliacoes() {
 		avaliacaoMedia = (double)totalEstrelas / qntdAvaliacoes;
+		if(qntdAvaliacoes == 0){
+			avaliacaoMedia = 0d;
+		}
 		return avaliacaoMedia;
 	}
 

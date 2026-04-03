@@ -1,5 +1,5 @@
 void main(){
-    Livro livro1 = new Livro("Machado", "Um livro de machados", 277);
+    Livro livro1 = new Livro("Anonimo", "Um livro estranho sobre chuveiros", 120);
 
     livro1.avaliar(5);
     livro1.avaliar(4);
@@ -8,6 +8,6 @@ void main(){
 
     livro1.mediaAvaliacoes();
 
-    livro1.estimativaLeitura(5);
+    livro1.estimativaLeitura(3);
     IO.print(livro1.toString());
 }
