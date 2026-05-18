@@ -1,0 +1,172 @@
+<Project>
+  <Name>Classes-PM</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Produto</Name>
+    <Language>Java</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Produto</Name>
+        <Access>Public</Access>
+        <Location left="509" top="253" />
+        <Size width="374" height="196" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private String descProduto</Member>
+        <Member type="Field">private double precoCusto</Member>
+        <Member type="Field">private double margemLucro</Member>
+        <Member type="Constructor">public Produto(String descricao, double precoCusto, double margemLucro)</Member>
+        <Member type="Method">public double valorVenda()</Member>
+        <Member type="Method">public boolean podeSerTrocado()</Member>
+        <Member type="Method">public String toString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ProdutoPerecivel</Name>
+        <Access>Public</Access>
+        <Location left="416" top="551" />
+        <Size width="560" height="213" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private LocalDate dataVencimento</Member>
+        <Member type="Field">private static int DIAS_VENCIMENTO = 7</Member>
+        <Member type="Field">private static double DESCONTO = 0.5</Member>
+        <Member type="Constructor">public ProdutoPerecivel(String descricao, double precoCusto, double margemLucro, LocalDate dataVencimento)</Member>
+        <Member type="Method">private int verificarValidade()</Member>
+        <Member type="Method">public double calcularDesconto()</Member>
+        <Member type="Method">public double valorVenda()</Member>
+        <Member type="Method">public boolean podeSerTrocado()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Pedido</Name>
+        <Access>Public</Access>
+        <Location left="1131" top="275" />
+        <Size width="408" height="196" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private List&lt;Produto&gt; produtos</Member>
+        <Member type="Field">private LocalDate dataPedido</Member>
+        <Member type="Field">private static int DIAS_TROCA = 7</Member>
+        <Member type="Constructor">public Pedido(LocalDate dataPedido)</Member>
+        <Member type="Method">public List ordemAlfabetica()</Member>
+        <Member type="Method">public Produto trocarProduto(Produto novoProduto, Produto antigoProduto)</Member>
+        <Member type="Method">public String cupomPedido()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Generalization" first="1" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="2" second="0">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Contas</Name>
+    <Language>Java</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Cliente</Name>
+        <Access>Public</Access>
+        <Location left="332" top="197" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private List&lt;Conta&gt; contas</Member>
+        <Member type="Method">public int adicionarConta()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Conta</Name>
+        <Access>Public</Access>
+        <Location left="761" top="197" />
+        <Size width="285" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int ID</Member>
+        <Member type="Field">private double saldo</Member>
+        <Member type="Constructor">public Conta(int id)</Member>
+        <Member type="Method">public double saque(double valor)</Member>
+        <Member type="Method">public double deposito(double valor)</Member>
+        <Member type="Method">public double saldo()</Member>
+        <Member type="Method">public String toString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ContaCorrente</Name>
+        <Access>Public</Access>
+        <Location left="975" top="485" />
+        <Size width="204" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private double limite</Member>
+        <Member type="Method">public String toString()</Member>
+        <Member type="Method">public double saque()</Member>
+        <Member type="Method">public double depoisto(double valor)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Poupança</Name>
+        <Access>Public</Access>
+        <Location left="189" top="754" />
+        <Size width="305" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private static final double TAXA = 0.03</Member>
+        <Member type="Method">public double estimarRendimento(double taxaRendimento)</Member>
+        <Member type="Method">public double atualizarSaldo(double taxaRendimento)</Member>
+        <Member type="Method">public String toString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ContaInvestimento</Name>
+        <Access>Public</Access>
+        <Location left="486" top="485" />
+        <Size width="323" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">protected double ultimoInvestumento</Member>
+        <Member type="Method">public double estimarRendimento(double taxaRendimento)</Member>
+        <Member type="Method">public double atualizarSaldo(double taxaRendimento)</Member>
+        <Member type="Method">public String toString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Investimento</Name>
+        <Access>Public</Access>
+        <Location left="797" top="754" />
+        <Size width="299" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private static final double DESCONTO = 0.002</Member>
+        <Member type="Method">public double estimarRendimento(double taxaRendimento)</Member>
+        <Member type="Method">public double atualizarSaldo(double taxaRendimento)</Member>
+        <Member type="Method">public String toString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="0" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Generalization" first="2" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="4" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="5" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="3" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
