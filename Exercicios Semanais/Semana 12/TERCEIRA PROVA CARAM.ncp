@@ -1,0 +1,169 @@
+<Project>
+  <Name>TERCEIRA PROVA CARAM</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>ExercicioSemanal12</Name>
+    <Language>Java</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>CursoPresencial</Name>
+        <Access>Public</Access>
+        <Location left="290" top="547" />
+        <Size width="442" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private static int CARGA_MIN = 30</Member>
+        <Member type="Field">private static int CARGA_MAX = 120</Member>
+        <Member type="Field">private MaterialDitatico material</Member>
+        <Member type="Constructor">public CursoPresencial(String nome, int horas, double valorHora, MaterialDitatico material)</Member>
+        <Member type="Method">public double valorTotal()</Member>
+        <Member type="Method">public double valorAulas()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Aluno</Name>
+        <Access>Public</Access>
+        <Location left="961" top="267" />
+        <Size width="209" height="169" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private String nome</Member>
+        <Member type="Field">private int matricula</Member>
+        <Member type="Field">private Map&lt;int, Curso&gt; cursados</Member>
+        <Member type="Method">public boolean fezCurso(Curso curso)</Member>
+        <Member type="Method">public int matricular(Curso curso)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Professor</Name>
+        <Access>Public</Access>
+        <Location left="75" top="285" />
+        <Size width="215" height="213" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private static int MULTIPLO_AULAS = 5</Member>
+        <Member type="Field">private String nome</Member>
+        <Member type="Field">private int matricula</Member>
+        <Member type="Field">private Map&lt;int, Curso&gt; lecionados</Member>
+        <Member type="Field">private List&lt;int&gt; notasAvaliacao</Member>
+        <Member type="Method">public int incluir(Curso curso)</Member>
+        <Member type="Method">public double valorAReceber()</Member>
+        <Member type="Method">public double calcularAvaliacao()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>MaterialDitatico</Name>
+        <Access>Public</Access>
+        <Location left="75" top="568" />
+        <Size width="162" height="154" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private String nome</Member>
+        <Member type="Field">private double valor</Member>
+        <Member type="Field">private List&lt;String&gt; conteudo</Member>
+        <Member type="Method">public double valorTotal()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Curso</Name>
+        <Access>Public</Access>
+        <Location left="681" top="267" />
+        <Size width="172" height="171" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private String nome</Member>
+        <Member type="Field">protected double valorHora</Member>
+        <Member type="Field">private int cargaHoraria</Member>
+        <Member type="Method">public abstract double valorTotal()</Member>
+        <Member type="Method">public abstract int qualCargaHoraria()</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>Avaliavel</Name>
+        <Access>Public</Access>
+        <Location left="681" top="10" />
+        <Size width="187" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">double calcularAvaliacao()</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>VideoAula</Name>
+        <Access>Public</Access>
+        <Location left="1418" top="568" />
+        <Size width="162" height="170" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private String titulo</Member>
+        <Member type="Field">private int duracao</Member>
+        <Member type="Method">public int duracaoAula()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>CursoOnline</Name>
+        <Access>Public</Access>
+        <Location left="1053" top="547" />
+        <Size width="216" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private static double PORCENT_AULA = 0,2</Member>
+        <Member type="Field">private List&lt;int&gt; notasAvaliacao</Member>
+        <Member type="Field">private static int AVALIACAO_MAX = 10</Member>
+        <Member type="Field">private static int AVALIACAO_MIN = 0</Member>
+        <Member type="Method">public double valorTotal()</Member>
+        <Member type="Method">public int qualCargaHoraria()</Member>
+        <Member type="Method">public double calcularAvaliacao()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Generalization" first="0" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="7" second="6">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Generalization" first="7" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="7" second="5">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1212</X>
+          <Y>522</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>936</X>
+          <Y>127</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="2" second="5">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>655</X>
+          <Y>123</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="3" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="1" second="4">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
