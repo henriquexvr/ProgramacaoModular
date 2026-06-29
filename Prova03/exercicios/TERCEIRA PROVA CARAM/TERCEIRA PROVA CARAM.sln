@@ -1,0 +1,7 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{}") = "ExercicioSemanal12", "", "{}"
+EndProject
+Project("{}") = "ExercicioRevisao", "", "{}"
+EndProject
