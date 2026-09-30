@@ -25,7 +25,7 @@ public class ACG {
         };
 
         creditos = (int) cargaHoraria / horasPorCredito;
-        if(creditos > MAX_CREDITOS;){
+        if(creditos > MAX_CREDITOS){
             creditos = MAX_CREDITOS;
         }
         return  creditos;
@@ -33,5 +33,14 @@ public class ACG {
 
     public String tipoAtividade(){
         return tipoAtividade;
+    }
+
+    public void teste(){
+        String placar = "3 x 1";
+        String[] placarDiv = placar.split(" ");
+        int[] placarInt = new int[3];
+
+        placarInt[0] = Integer.parseInt(placarDiv[0]);
+        placarInt[1] = Integer.parseInt(placarDiv[1]);
     }
 }
